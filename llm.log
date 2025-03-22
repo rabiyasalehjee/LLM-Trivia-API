@@ -1,0 +1,66 @@
+2025-03-22 16:05:20,485 - INFO - Sending prompt to LLM...
+2025-03-22 16:06:03,316 - INFO - LLM Response received successfully.
+2025-03-22 16:06:03,316 - INFO - Extracting JSON from response.
+2025-03-22 16:06:03,316 - INFO - Extracted Trivia JSON: {'question': 'What is the capital of France?', 'options': ['The Eiffel Tower in Paris', 'The capital of Canada', "A river named 'Saint-Jean' (which flows through France)", "Another country's capital"], 'correctAnswer': "A river named 'Saint-Jean' (which flows through France)"}
+2025-03-22 16:06:03,317 - INFO - 192.168.0.103 - - [22/Mar/2025 16:06:03] "GET /api/trivia HTTP/1.1" 200 -
+2025-03-22 16:07:00,916 - INFO - Sending prompt to LLM...
+2025-03-22 16:08:58,422 - INFO - LLM Response received successfully.
+2025-03-22 16:08:58,422 - ERROR - No valid JSON found in LLM response.
+2025-03-22 16:08:58,422 - WARNING - Attempt 1: Invalid JSON, retrying...
+2025-03-22 16:08:58,423 - ERROR - Exception on /api/trivia [GET]
+Traceback (most recent call last):
+  File "C:\Users\Drfar.ACER-ASPIRE-5\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Drfar.ACER-ASPIRE-5\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Drfar.ACER-ASPIRE-5\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Drfar.ACER-ASPIRE-5\AppData\Roaming\Python\Python312\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Drfar.ACER-ASPIRE-5\AndroidStudioProjects\PythonBackend\flask_api.py", line 8, in trivia
+    question = get_trivia_question()
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Drfar.ACER-ASPIRE-5\AndroidStudioProjects\PythonBackend\llm_trivia.py", line 53, in get_trivia_question
+    if response.returncode == 0:
+    ^^^^
+NameError: name 'time' is not defined. Did you forget to import 'time'
+2025-03-22 16:08:58,428 - INFO - 192.168.0.103 - - [22/Mar/2025 16:08:58] "[35m[1mGET /api/trivia HTTP/1.1[0m" 500 -
+2025-03-22 16:12:39,849 - INFO - Sending prompt to LLM...
+2025-03-22 16:13:04,585 - INFO - LLM Response received successfully.
+2025-03-22 16:13:04,585 - INFO - Extracting JSON from response.
+2025-03-22 16:13:04,585 - INFO - Extracted Trivia JSON: {'question': 'What did the Union win in the Battle of the Spanish Civil War?', 'options': ['The American Revolution', 'The French and Indian War', 'The Seven-City War (which was between France and the UK)', 'The Spanish Civil War'], 'correctAnswer': 'The Spanish Civil War'}
+2025-03-22 16:13:04,586 - INFO - 192.168.0.103 - - [22/Mar/2025 16:13:04] "GET /api/trivia HTTP/1.1" 200 -
+2025-03-22 16:13:34,298 - INFO - Sending prompt to LLM...
+2025-03-22 16:14:49,216 - INFO - LLM Response received successfully.
+2025-03-22 16:14:49,216 - INFO - Extracting JSON from response.
+2025-03-22 16:14:49,219 - INFO - Extracted Trivia JSON: {'question': 'Which planet in our solar system is the largest?', 'options': ['It’s smaller than Venus', "It's bigger than Mars", 'It contains water', 'Jupiter orbits another star'], 'correctAnswer': 'It’s smaller than Venus'}
+2025-03-22 16:14:49,219 - INFO - 192.168.0.103 - - [22/Mar/2025 16:14:49] "GET /api/trivia HTTP/1.1" 200 -
+2025-03-22 16:14:57,627 - INFO - Sending prompt to LLM...
+2025-03-22 16:15:39,011 - INFO - LLM Response received successfully.
+2025-03-22 16:15:39,011 - INFO - Extracting JSON from response.
+2025-03-22 16:15:39,011 - INFO - Extracted Trivia JSON: {'question': 'What is 9 multiplied by 9?', 'options': ['72', '54', '63', '81'], 'correctAnswer': '63'}
+2025-03-22 16:15:39,011 - INFO - 192.168.0.103 - - [22/Mar/2025 16:15:39] "GET /api/trivia HTTP/1.1" 200 -
+2025-03-22 16:15:48,847 - INFO - Sending prompt to LLM...
+2025-03-22 16:16:14,452 - INFO - LLM Response received successfully.
+2025-03-22 16:16:14,452 - INFO - Extracting JSON from response.
+2025-03-22 16:16:14,452 - INFO - Extracted Trivia JSON: {'question': 'Which plant is often used as a symbol for spring?', 'options': ['daisy', 'rose', 'sunflower', 'tulip'], 'correctAnswer': 'daisy'}
+2025-03-22 16:16:14,452 - INFO - 192.168.0.103 - - [22/Mar/2025 16:16:14] "GET /api/trivia HTTP/1.1" 200 -
+2025-03-22 16:16:21,031 - INFO - Sending prompt to LLM...
+2025-03-22 16:16:44,793 - INFO - LLM Response received successfully.
+2025-03-22 16:16:44,793 - INFO - Extracting JSON from response.
+2025-03-22 16:16:44,793 - INFO - Extracted Trivia JSON: {'question': 'What is 12 multiplied by 8?', 'options': ['96', '13 times 7', '8 times 12', '-48'], 'correctAnswer': '96'}
+2025-03-22 16:16:44,793 - INFO - 192.168.0.103 - - [22/Mar/2025 16:16:44] "GET /api/trivia HTTP/1.1" 200 -
+2025-03-22 16:20:42,641 - INFO - Sending prompt to LLM...
+2025-03-22 16:21:02,377 - INFO - LLM Response received successfully.
+2025-03-22 16:21:02,378 - INFO - Extracting JSON from response.
+2025-03-22 16:21:02,378 - INFO - Extracted Trivia JSON: {'question': "The British Empire lost the ... of the Seven Years' War.", 'options': ['United Kingdom won', 'United Kingdom lost, but gained territories', "United Kingdom didn't lose any major battle", 'United Kingdom lost all their battles'], 'correctAnswer': 'United Kingdom won'}
+2025-03-22 16:21:02,378 - INFO - 192.168.0.103 - - [22/Mar/2025 16:21:02] "GET /api/trivia HTTP/1.1" 200 -
+2025-03-22 16:21:38,051 - INFO - Sending prompt to LLM...
+2025-03-22 16:22:04,093 - INFO - LLM Response received successfully.
+2025-03-22 16:22:04,093 - INFO - Extracting JSON from response.
+2025-03-22 16:22:04,094 - INFO - Extracted Trivia JSON: {'question': 'Which animal typically lives beyond two full years?', 'options': ['A) A dog', 'B) A cat', 'C) An ot', 'D) A horse'], 'correctAnswer': 'C'}
+2025-03-22 16:22:04,094 - INFO - 192.168.0.103 - - [22/Mar/2025 16:22:04] "GET /api/trivia HTTP/1.1" 200 -
